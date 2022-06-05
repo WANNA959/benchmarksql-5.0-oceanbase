@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>
-    BenchmarkSQL Run #3 started 2022-05-30 11:39:39.072
+    BenchmarkSQL Run #8 started 2022-06-05 10:07:34.626
   </title>
   <style>
 
@@ -47,7 +47,7 @@ big		{ font-weight: 900;
 </head>
 <body bgcolor="#ffffff">
   <h1>
-    BenchmarkSQL Run #3 started 2022-05-30 11:39:39.072
+    BenchmarkSQL Run #8 started 2022-06-05 10:07:34.626
   </h1>
 
   <p>
@@ -67,9 +67,9 @@ conn=jdbc:mysql://127.0.0.1:2881/tpcc?rewriteBatchedStatements=true&allowMultiQu
 //请填写完整user信息
 user=root@sys
 password=******
-warehouses=1
-loadWorkers=2
-terminals=2
+warehouses=2
+loadWorkers=3
+terminals=3
 database=test
 //To run specified transactions per terminal- runMins must equal zero
 runTxnsPerTerminal=0
@@ -125,40 +125,40 @@ osCollectorInterval=1
     </tr>
     <tr>
       <td align="left">NEW_ORDER</td>
-      <td align="right">4.739s</td>
-      <td align="right">6.413s</td>
-      <td align="right">304</td>
-      <td align="right">44.970%</td>
-      <td align="right">1.316%</td>
+      <td align="right">10.681s</td>
+      <td align="right">18.194s</td>
+      <td align="right">206</td>
+      <td align="right">44.301%</td>
+      <td align="right">0.000%</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">PAYMENT</td>
-      <td align="right">0.593s</td>
-      <td align="right">3.661s</td>
-      <td align="right">294</td>
-      <td align="right">43.491%</td>
+      <td align="right">0.100s</td>
+      <td align="right">6.190s</td>
+      <td align="right">204</td>
+      <td align="right">43.871%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">ORDER_STATUS</td>
-      <td align="right">0.255s</td>
-      <td align="right">0.295s</td>
-      <td align="right">26</td>
-      <td align="right">3.846%</td>
+      <td align="right">0.680s</td>
+      <td align="right">0.719s</td>
+      <td align="right">18</td>
+      <td align="right">3.871%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">STOCK_LEVEL</td>
-      <td align="right">0.301s</td>
-      <td align="right">0.340s</td>
-      <td align="right">17</td>
-      <td align="right">2.515%</td>
+      <td align="right">0.757s</td>
+      <td align="right">0.799s</td>
+      <td align="right">19</td>
+      <td align="right">4.086%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
@@ -167,17 +167,17 @@ osCollectorInterval=1
       <td align="left">DELIVERY</td>
       <td align="right">0.000s</td>
       <td align="right">0.001s</td>
-      <td align="right">35</td>
-      <td align="right">5.178%</td>
+      <td align="right">18</td>
+      <td align="right">3.871%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">DELIVERY_BG</td>
-      <td align="right">5.064s</td>
-      <td align="right">7.058s</td>
-      <td align="right">35</td>
+      <td align="right">13.914s</td>
+      <td align="right">19.511s</td>
+      <td align="right">18</td>
       <td align="right">N/A</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
@@ -190,11 +190,11 @@ osCollectorInterval=1
     <table border="0">
       <tr>
         <td align="left"><big><b>Overall tpmC:</b></big></td>
-        <td align="right"><big><b>30.40</b></big></td>
+        <td align="right"><big><b>20.60</b></big></td>
       </tr>
       <tr>
         <td align="left"><big><b>Overall tpmTotal:</b></big></td>
-        <td align="right"><big><b>67.60</b></big></td>
+        <td align="right"><big><b>46.50</b></big></td>
       </tr>
     </table>
   </p>
@@ -206,8 +206,8 @@ osCollectorInterval=1
     including the database. 
   </p>
   <p>
-    The above tpmC of 30.40 is 236.392% of that theoretical maximum for a
-    database with 1 warehouses.
+    The above tpmC of 20.60 is 80.093% of that theoretical maximum for a
+    database with 2 warehouses.
   </p>
 
   <h2>

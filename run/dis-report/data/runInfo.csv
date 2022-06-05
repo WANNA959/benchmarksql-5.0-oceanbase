@@ -1,2 +1,2 @@
 run,driver,driverVersion,db,sessionStart,runMins,loadWarehouses,runWarehouses,numSUTThreads,limitTxnsPerMin,thinkTimeMultiplier,keyingTimeMultiplier
-7,simple,5.0,oceanbase,2022-05-30 17:12:21.442,10,2,2,3,0,1.0,1.0
+9,simple,5.0,oceanbase,2022-06-05 12:15:42.987,10,2,2,3,0,1.0,1.0

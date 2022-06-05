@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>
-    BenchmarkSQL Run #7 started 2022-05-30 17:12:21.442
+    BenchmarkSQL Run #9 started 2022-06-05 12:15:42.987
   </title>
   <style>
 
@@ -47,7 +47,7 @@ big		{ font-weight: 900;
 </head>
 <body bgcolor="#ffffff">
   <h1>
-    BenchmarkSQL Run #7 started 2022-05-30 17:12:21.442
+    BenchmarkSQL Run #9 started 2022-06-05 12:15:42.987
   </h1>
 
   <p>
@@ -63,12 +63,13 @@ big		{ font-weight: 900;
     <pre><small>
 db=oceanbase
 driver=com.mysql.jdbc.Driver
-conn=jdbc:mysql://127.0.0.1:2881/tpcc?rewriteBatchedStatements=true&allowMultiQueries=true&useLocalSessionState=true&useUnicode=true&characterEncoding=utf-8&socketTimeout=30000000&useSSL=false
+conn=jdbc:mysql:loadbalance://192.168.0.2:2881,192.168.0.200:2881,192.168.0.16:2881/tpcc?rewriteBatchedStatements=true&allowMultiQueries=true&useLocalSessionState=true&useUnicode=true&characterEncoding=utf-8&socketTimeout=30000000&useSSL=false
 //请填写完整user信息
 user=root@sys
+//user=root@tpcc_tenant
 password=******
 warehouses=2
-loadWorkers=3
+loadWorkers=6
 terminals=3
 database=test
 //To run specified transactions per terminal- runMins must equal zero
@@ -125,59 +126,59 @@ osCollectorInterval=1
     </tr>
     <tr>
       <td align="left">NEW_ORDER</td>
-      <td align="right">10.436s</td>
-      <td align="right">14.979s</td>
-      <td align="right">202</td>
-      <td align="right">49.389%</td>
-      <td align="right">1.485%</td>
+      <td align="right">9.963s</td>
+      <td align="right">11.925s</td>
+      <td align="right">226</td>
+      <td align="right">45.749%</td>
+      <td align="right">0.442%</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">PAYMENT</td>
-      <td align="right">0.413s</td>
-      <td align="right">6.666s</td>
-      <td align="right">164</td>
-      <td align="right">40.098%</td>
+      <td align="right">0.094s</td>
+      <td align="right">9.987s</td>
+      <td align="right">208</td>
+      <td align="right">42.105%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">ORDER_STATUS</td>
-      <td align="right">0.834s</td>
-      <td align="right">0.866s</td>
-      <td align="right">15</td>
-      <td align="right">3.667%</td>
+      <td align="right">0.668s</td>
+      <td align="right">0.704s</td>
+      <td align="right">22</td>
+      <td align="right">4.453%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">STOCK_LEVEL</td>
-      <td align="right">0.684s</td>
-      <td align="right">0.702s</td>
-      <td align="right">12</td>
-      <td align="right">2.934%</td>
+      <td align="right">0.732s</td>
+      <td align="right">0.780s</td>
+      <td align="right">21</td>
+      <td align="right">4.251%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">DELIVERY</td>
-      <td align="right">0.001s</td>
-      <td align="right">0.001s</td>
-      <td align="right">16</td>
-      <td align="right">3.912%</td>
+      <td align="right">0.000s</td>
+      <td align="right">0.000s</td>
+      <td align="right">17</td>
+      <td align="right">3.441%</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
       <td align="right">N/A</td>
     </tr>
     <tr>
       <td align="left">DELIVERY_BG</td>
-      <td align="right">12.527s</td>
-      <td align="right">12.980s</td>
-      <td align="right">16</td>
+      <td align="right">11.548s</td>
+      <td align="right">16.145s</td>
+      <td align="right">17</td>
       <td align="right">N/A</td>
       <td align="right">N/A</td>
       <td align="right">0</td>
@@ -190,11 +191,11 @@ osCollectorInterval=1
     <table border="0">
       <tr>
         <td align="left"><big><b>Overall tpmC:</b></big></td>
-        <td align="right"><big><b>20.20</b></big></td>
+        <td align="right"><big><b>22.60</b></big></td>
       </tr>
       <tr>
         <td align="left"><big><b>Overall tpmTotal:</b></big></td>
-        <td align="right"><big><b>40.90</b></big></td>
+        <td align="right"><big><b>49.40</b></big></td>
       </tr>
     </table>
   </p>
@@ -206,7 +207,7 @@ osCollectorInterval=1
     including the database. 
   </p>
   <p>
-    The above tpmC of 20.20 is 78.538% of that theoretical maximum for a
+    The above tpmC of 22.60 is 87.869% of that theoretical maximum for a
     database with 2 warehouses.
   </p>
 
